@@ -103,6 +103,52 @@ Finally, configure Visual Studio Code to work with WSL.
 
 ---
 
+## Configuring Git and GitHub on WSL2
+
+### Create a GitHub Account
+
+To work on and get credit for the labs and lessons during the program, you will need to sign up for a GitHub account if you don't already have one.
+
+**Action Item: Create a GitHub Account**
+1. Open the [GitHub signup webpage](https://github.com/join) in your browser.
+2. Fill out the form to create your account.
+3. Verify the email address connected to your GitHub account.
+
+**Check Your Work:** [Video Guide](https://youtu.be/f2yf1RJUAp4?si=NqbxqULTZukGSdWy)
+
+---
+
+### Configure Git and GitHub
+
+Git is the tool we will use to download and upload our work in labs and lessons. To avoid signing in every time, create a Secure Shell (SSH) key and associate it with your GitHub account.
+
+**Action Item: Update Git**
+1. Open the **Ubuntu** application using the **Start** menu.
+2. Type `sudo add-apt-repository ppa:git-core/ppa` and press `<Enter>` to add a package repository for downloading the latest version of Git. Follow the prompts.
+3. Type `sudo apt update` and press `<Enter>` to update your local repository cache.
+4. Type `sudo apt install git` and press `<Enter>` to install the latest version of Git.
+
+**Check Your Work:** [Video Guide](https://youtu.be/hgAurDMhKAc?si=b7eZtql1qP8qfULB)
+
+---
+
+**Action Item: Configure Git**
+1. Open the **Ubuntu** application.
+2. Type `git config --global color.ui true` and press `<Enter>`.
+3. Type `git config --global user.name "Your Full Name"` and press `<Enter>`.
+4. Type `git config --global user.email "your_email@example.com"` and press `<Enter>`.
+5. Type `git config --global init.defaultBranch main` to set the default branch name to main.
+6. Type `ssh-keygen` and press `<Enter>`. For each prompt, just press `<Enter>` (do not enter a passphrase).
+7. Type `cat ~/.ssh/id_rsa.pub | clip.exe` and press `<Enter>` to copy your SSH key to your clipboard.
+8. Open the [GitHub New SSH key form](https://github.com/settings/ssh/new) (you need to be logged in to GitHub).
+9. Type **"My personal PC"** in the **Title** input field.
+10. Paste the SSH key from your clipboard in the **Key** input field.
+11. Click **Add SSH Key**.
+
+**Check Your Work:** [Video Guide](https://youtu.be/bRCOqNaYnKQ?si=cI8uHG56LOQB2SBy)
+
+---
+
 ## Conclusion
 
-You have successfully set up your development environment using WSL2 and Visual Studio Code. You’re now ready to start coding!
+You have successfully set up your development environment using WSL2, Visual Studio Code, and GitHub. You’re now ready to start coding!
